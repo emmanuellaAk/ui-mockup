@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import '../App.css'
 import React from "react";
 import Header from "../components/Header";
 import People from "../assets/Group.svg";
@@ -10,8 +10,16 @@ import Spotify from "../assets/Spotify.svg";
 import People2 from "../assets/People.svg";
 import People3 from "../assets/People 3.png";
 import Person1 from "../assets/Person1.png";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 export default function Landing() {
+  
+    const teamMembers = [
+      { name: "Peg Legge", role: "CEO", image: Person1 },
+      { name: "John Doe", role: "CTO", image: Person1 },
+      { name: "Jane Smith", role: "CFO", image: Person1 },
+      { name: "Richard Ferrera", role: "COO", image: Person1 }
+    ];
+ 
   return (
     <div>
       <Header />
@@ -109,59 +117,22 @@ export default function Landing() {
           Suscipit nemo hic quos, ab,
         </p>
 
-        <div className="mt-4 px-24 flex flex-row">
-          <div className="bg-white border-2 w-[279px] h-[299px] shadow-xl flex items-center flex-col">
-            <div className="bg-white border-2 border-black rounded-[50%] w-[180px] h-[180px] mt-4 ">
-              <img className=" mx-auto w-full h-full" src={Person1} alt="" />
-            </div>
-            <div>
-              <div className="mr-32 py-3">
-                <p className="text-2xl font-bold font-crimson">Peg Legge</p>
-                <p className="text-lg text-slate-500 mr-16 mt-3 font-sans">
-                  CEO
-                </p>
+        <div className="mt-4 px-22 flex flex-row justify-between ">
+          {teamMembers.map((member, index) => (
+            <div key={index} className="bg-white border-2 min-h-[13rem] shadow-xl flex items-center flex-col gap-3 px-2 min-w-[270px] max-w-[300px] ml-4">
+              <div className="bg-white border-2 border-black rounded-[50%]  mt-4 ">
+                <img className="mx-auto w-full h-full" src={member.image} alt={member.name} />
+              </div>
+              <div>
+                <div className="mr-32 py-3">
+                  <p className="text-2xl font-bold font-crimson">{member.name}</p>
+                  <p className="text-lg text-slate-500 mr-16 mt-3 font-sans">
+                    {member.role}
+                  </p>
+                </div> 
               </div>
             </div>
-          </div>
-          <div className="bg-white border-2 w-[279px] h-[299px] shadow-xl flex items-center flex-col ml-12">
-            <div className="bg-white border-2 border-black rounded-[50%] w-[180px] h-[180px] mt-4 ">
-              <img className=" mx-auto w-full h-full" src={Person1} alt="" />
-            </div>
-            <div>
-              <div className="mr-32 py-3">
-                <p className="text-2xl font-bold font-crimson">Peg Legge</p>
-                <p className="text-lg text-slate-500 mr-16 mt-3 font-sans">
-                  CEO
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="bg-white border-2 w-[279px] h-[299px] shadow-xl flex items-center flex-col ml-12">
-            <div className="bg-white border-2 border-black rounded-[50%] w-[180px] h-[180px] mt-4 ">
-              <img className=" mx-auto w-full h-full" src={Person1} alt="" />
-            </div>
-            <div>
-              <div className="mr-32 py-3">
-                <p className="text-2xl font-bold font-crimson">Peg Legge</p>
-                <p className="text-lg text-slate-500 mr-16 mt-3 font-sans">
-                  CEO
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="bg-white border-2 min-h-[13rem] shadow-xl flex items-center flex-col gap-3 px-2 min-w-[270px] max-w-[300px]">
-            <div className="bg-white border-2 border-black rounded-[50%] mt-4 ">
-              <img className=" mx-auto w-full h-full" src={Person1} alt="" />
-            </div>
-            <div className="w-full">
-              <div className="py-3 flex flex-col items-start pl-4">
-                <p className="text-2xl text-left font-bold font-crimson">Richard Ferrera</p>
-                <p className="text-lg text-slate-500 mt-3 font-sans">
-                  CEO
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
         <div className="flex items-center justify-center">
           <button className=" bg-black text-white px-8 py-3 rounded-lg text-xl mt-8">

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.shadow-custom {
+  box-shadow: 5px 0px 10px rgba(77, 76, 76, 0.5);
+}
+
 
 
 
