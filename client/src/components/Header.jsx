@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.svg";
-
+import Hamburger from '../assets/list.png'
 export default function Header() {
   return (
     <div>
-      <div className="bg-[rgb(60,216,112)] flex flex-row items-center justify-between px-24  text-white pt-6 pb-10 h-[123px]">
+      <nav className="bg-[rgb(60,216,112)] flex flex-row items-center justify-between md:px-24 px-10  text-white py-6">
         <div className="flex flex-row items-center">
-          <img src={Logo} />
-          <p className="font-medium text-5xl ml-2 font-sans">Start</p>
+          <img src={Logo} className="w-[45px] md:w-[55px]"/>
+          <p className="font-medium ml-2 font-sans text-3xl md:text-4xl">Start</p>
         </div>
-
-        <div className="flex flex-row space-x-6 px-16 font-sans text-2xl">
+       
+        <div className="md:flex flex-row space-x-6 px-16 font-sans text-2xl hidden">
           <Link to="/">
             <p>Home</p>
           </Link>
@@ -25,7 +25,9 @@ export default function Header() {
             <p>Contact</p>
           </Link>
         </div>
-      </div>
+         <img src={Hamburger} alt="" className="md:hidden " />
+      </nav>
     </div>
   );
 }
+// 

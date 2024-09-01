@@ -23,10 +23,10 @@ export default function Landing() {
   return (
     <div>
       <Header />
-      <div className="flex flex-row bg-[rgb(60,216,112)]  items-center  justify-evenly gap-16 px-16 pb-28">
-        <div className="flex text-white font-poppins w-3/6 flex-col items-start gap-5 px-8 max-w-[600px]">
+      <div className="flex flex-col-reverse md:flex-row  bg-[rgb(60,216,112)]  justify-evenly gap-16 md:px-16 pb-28 px-8">
+        <div className="flex text-white font-poppins md:w-3/6 flex-col items-start gap-5 px-8 max-w-[600px]">
           <p>WELCOME</p>
-          <p className="text-4xl leading-[3rem]">
+          <p className="text-3xl md:text-4xl leading-[3rem]">
             Lorem ipsum dolor sit <br />
             amet consectetur
           </p>
@@ -39,7 +39,7 @@ export default function Landing() {
             Explore
           </button>
         </div>
-        <div className="flex-1 w-3/6">
+        <div className="flex-1 md:w-3/6">
           <img src={People} alt="" />
         </div>
       </div>
@@ -54,7 +54,7 @@ export default function Landing() {
           Lorem ipsum, dolor sit amet consectetur <br />
           adipisicing elit.
         </p>
-        <div className="mt-6 flex flex-row items-center justify-between px-24">
+        <div className="mt-6 flex md:flex-row flex-col gap-10 items-center justify-between px-24">
           <img src={Google} alt="" />
           <img src={Microsoft} alt="" />
           <img src={Airbnb} alt="" />
@@ -67,28 +67,28 @@ export default function Landing() {
           </button>
         </div>
       </div>
-      <div className="px-24 flex flex-row items-center justify-between mt-16 mb-16">
+      <div className="px-24 flex md:flex-row flex-col items-center justify-between mt-16 mb-16 gap-8">
         <div>
           <img src={People2} alt="" />
         </div>
-        <div className="">
-          <p className="text-4xl leading-[3rem] font-bold font-crimson">
+        <div className="flex flex-col gap-5 items-start">
+          <p className="text-3xl leading-[2rem] font-bold font-crimson">
             Lorem ipsum dolor sit <br /> amet consectetur{" "}
           </p>
           <p className="font-sans">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             <br />
-            Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos <br />{" "}
+            Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos <br />
             error ipsum, voluptate culpa nesciunt delectus iste?
           </p>
-          <button className=" bg-black text-white px-8 py-3 rounded-lg text-xl mt-8">
+          <button className=" bg-black text-white px-10 py-3 rounded-lg text-xl">
             Learn More
           </button>
         </div>
       </div>
-      <div className="px-24 flex flex-row items-center justify-between mt-16 mb-16">
-        <div className="">
-          <p className="text-4xl leading-[3rem] font-bold font-crimson">
+      <div className="px-24 flex md:flex-row flex-col-reverse gap-8 items-center justify-between mt-16 mb-16">
+        <div className="flex flex-col items-start gap-5">
+          <p className="text-3xl md:text-4xl leading-[2rem] font-bold font-crimson">
             Lorem ipsum dolor sit <br /> amet consectetur{" "}
           </p>
           <p className="font-sans">
@@ -97,7 +97,7 @@ export default function Landing() {
             Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos <br />{" "}
             error ipsum, voluptate culpa nesciunt delectus iste?
           </p>
-          <button className=" bg-black text-white px-8 py-3 rounded-lg text-xl mt-8">
+          <button className=" bg-black text-white py-3 rounded-lg text-xl px-10">
             Learn More
           </button>
         </div>
@@ -117,14 +117,14 @@ export default function Landing() {
           Suscipit nemo hic quos, ab,
         </p>
 
-        <div className="mt-4 px-22 flex flex-row justify-between ">
+        <div className="mt-4 px-24 flex md:flex-row  justify-center flex-col gap-10 md:gap-3 md:px-24">
           {teamMembers.map((member, index) => (
-            <div key={index} className="bg-white border-2 min-h-[13rem] shadow-xl flex items-center flex-col gap-3 px-2 min-w-[270px] max-w-[300px] ml-4">
-              <div className="bg-white border-2 border-black rounded-[50%]  mt-4 ">
-                <img className="mx-auto w-full h-full" src={member.image} alt={member.name} />
+            <div key={index} className=" mx-auto border-2 min-h-[13rem] shadow-xl flex  flex-col gap-3 px-2 min-w-[270px] max-w-[300px]">
+              <div className="bg-white border-2 border-black rounded-[50%] mt-4 w-[180px] h-[180px] mx-auto">
+                <img className="w-full h-full" src={member.image} alt={member.name} />
               </div>
               <div>
-                <div className="mr-32 py-3">
+                <div className="py-3 w-full flex flex-col items-start pl-2">
                   <p className="text-2xl font-bold font-crimson">{member.name}</p>
                   <p className="text-lg text-slate-500 mr-16 mt-3 font-sans">
                     {member.role}

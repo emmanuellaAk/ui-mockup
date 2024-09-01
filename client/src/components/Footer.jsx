@@ -9,7 +9,7 @@ import Youtube from "../assets/Youtube.svg";
 export default function Footer() {
  
   return (
-    <div className='bg-[rgb(60,216,112)] flex flex-row items-center justify-between px-24 h-[125px] mt-16'>
+    <div className='bg-[rgb(60,216,112)] flex md:flex-row items-center justify-between md:px-24 px-8 py-8 mt-16 flex-col gap-5'>
       <div className='flex flex-row items-center space-x-4'>
         <img src={Facebook} alt="" />
         <img src={Google} alt="" />
