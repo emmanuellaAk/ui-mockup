@@ -44,7 +44,7 @@ export default function Services() {
         </p>
       </div>
       
-      <div className="mt-8 px-28 grid grid-cols-3 gap-8">
+      <div className="mt-8 md:px-28  grid md:grid-cols-3 md:gap-8 px-14 gap-14">
         {plans.map((plan, index) => (
           <div key={index} className="text-center rounded-lg py-12 shadow-custom">
             <div>
@@ -55,7 +55,7 @@ export default function Services() {
                   /month
                 </span>
               </p>
-              <p className="text-[rgb(128,128,128)] font-sans mt-2">
+              <p className="text-[rgb(128,128,128)] font-sans mt-2 px-4">
                 {plan.description.split('\n').map((line, index) => (
                   <React.Fragment key={index}>
                     {line}

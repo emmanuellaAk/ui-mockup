@@ -16,27 +16,27 @@ export default function Contact() {
           adipisicing elit.
         </p>
       </div>
-      <div className="grid grid-cols-2 px-24 items-center justify-between mt-16 gap-5">
-        <form action="" className="p-4 grid grid-cols-1 gap-4">
-          <div>
-            <label className="font-bold block">Name</label>
-            <input type="text" className="h-8  border-2 w-full px-2" />
-          </div>
-          <div>
-            <label className="font-bold block">Email</label>
-            <input type="email" className="h-8 w-full  border-2 px-2" />
-          </div>
-          <div>
-            <label className="font-bold block">Message</label>
-            <textarea className="h-20 w-full border-2 px-2"></textarea>
-          </div>
-          <button className="bg-black text-white py-1 w-full ">Submit</button>
-        </form>
+      <div className="bg-orange-400 md:grid md:grid-cols-2 flex flex-col-reverse md:px-24 px-12 items-center justify-between mt-16 gap-5">
+  <form action="" className="bg-red-600 p-4 grid grid-cols-1 gap-4">
+    <div>
+      <label className="font-bold block">Name</label>
+      <input type="text" className="h-8 border-2 w-full " />
+    </div>
+    <div>
+      <label className="font-bold block">Email</label>
+      <input type="email" className="h-8 w-full border-2" />
+    </div>
+    <div>
+      <label className="font-bold block">Message</label>
+      <textarea className="h-20 w-full border-2"></textarea>
+    </div>
+    <button className="bg-black text-white py-3 w-full text-xl">Submit</button>
+  </form>
 
-        <div>
-          <img src={Map} alt="" />
-        </div>
-      </div>
+  <div className="flex justify-center items-center">
+    <img src={Map} alt="" className="max-w-full h-auto" />
+  </div>
+</div>
       <Footer />
     </div>
   );

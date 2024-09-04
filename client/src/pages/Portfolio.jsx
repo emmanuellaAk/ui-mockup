@@ -21,7 +21,7 @@ export default function Portfolio() {
           adipisicing elit.
         </p>
       </div>
-      <div className="px-24 gap-9 grid grid-cols-2 mt-20 mb-8">
+      <div className="md:px-24 px-12 space-y-10  grid md:grid-cols-2 grid-cols-1  md:gap-9 mt-20 mb-8">
         <img className="border-black border-2" src={Landing} alt="" />
         <img className="border-black border-2" src={Web} alt="" />
         <img className="border-black border-2" src={Landing} alt="" />
